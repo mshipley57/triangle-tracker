@@ -12,7 +12,10 @@ $(document).ready(function() {
       $('#isosceles').show();
     } else if (length1 != length2 && length2 != length3 && length1 != length3) {
       $('#scalene').show();
+    } else if (length1 = "value=0" || length2 = "value=0" || length3 = "value=0") {
+      $('#none').show();
     }
+
 
     event.preventDefault();
   });

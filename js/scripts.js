@@ -6,13 +6,11 @@ $(document).ready(function() {
     var length2 = parseInt($("input#length2").val());
     var length3 = parseInt($("input#length3").val());
 
-    if (length1 === length2 === length3) {
-
-
+    if (length1 === length2 && length2 === length3 && length1 === length3) {
       $('#equilateral').show();
-    } else if (length1 === length2) {
+    } else if (length1 === length2 || length1 === length3 || length2 === length3 || length3 === length1 || length1 === length2 || length2 === length3) {
       $('#isosceles').show();
-    } else () {
+    } else if (length1 != length2 && length2 != length3 && length1 != length3) {
       $('#scalene').show();
     }
 

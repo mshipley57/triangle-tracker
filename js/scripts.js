@@ -6,16 +6,15 @@ $(document).ready(function() {
     var length2 = parseInt($("input#length2").val());
     var length3 = parseInt($("input#length3").val());
 
-    if (length1 === length2 && length2 === length3 && length1 === length3) {
-      $('#equilateral').show();
+    if ((length1 === 0) || (length2 === 0) || (length3 === 0)) {
+      $('#none').show();
     } else if (length1 === length2 || length1 === length3 || length2 === length3 || length3 === length1 || length1 === length2 || length2 === length3) {
       $('#isosceles').show();
     } else if (length1 != length2 && length2 != length3 && length1 != length3) {
       $('#scalene').show();
-    } else if (length1 = "value=0" || length2 = "value=0" || length3 = "value=0") {
-      $('#none').show();
+    } else if (length1 === length2 && length2 === length3 && length1 === length3) {
+      $('#equilateral').show();
     }
-
 
     event.preventDefault();
   });
